@@ -9,7 +9,7 @@ const dbPromise = open({
 async function init() {
   const db = await dbPromise;
   await db.exec(
-    "CREATE TABLE IF NOT EXISTS todos (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, complete INTEGER)"
+    "CREATE TABLE IF NOT EXISTS todos (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, complete INTEGER, due_date TEXT)"
   );
 }
 
